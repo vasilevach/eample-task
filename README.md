@@ -5,6 +5,6 @@
 3. Start the React app: `yarn start`
 
 ## Tasks
-1. Implement the figma design using the API provided
+1. Implement the figma design using the [API provided](https://6347d56a0484786c6e89e5bb.mockapi.io/api/assignments)
 2. You can use all libraries and resources you need for this task
 
