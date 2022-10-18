@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Card, CardContent, IconButton, Typography, useMediaQuery } from '@mui/material';
 import { PushPin, School, LibraryBooks } from '@mui/icons-material';
 import { Rating, RCS } from '../components';
-import theme from '../theme/theme';
+import { theme } from '../theme/theme';
 
 type Props = {
 };
