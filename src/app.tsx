@@ -1,16 +1,27 @@
 import React from 'react';
-import { CssBaseline, Typography, ThemeProvider } from '@mui/material';
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import ContentPage from './pages/content-page';
 
 import theme from './theme/theme';
 
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      refetchOnReconnect: false
+    }
+  }
+});
+
 function App() {
   return (
-    <>
-      <CssBaseline />
+    <QueryClientProvider client={queryClient}>
+      <CssBaseline/>
       <ThemeProvider theme={theme}>
-        <Typography>App goes here</Typography>
+        <ContentPage/>
       </ThemeProvider>
-    </>
+    </QueryClientProvider>
   );
 }
 
